@@ -1,11 +1,11 @@
 # wallpaper [![godoc](https://godoc.org/github.com/reujab/wallpaper?status.svg)](https://godoc.org/github.com/reujab/wallpaper)
 
-A cross-platform (Linux, Windows, and macOS) Golang library for getting and setting the desktop background.
+A cross-platform (Linux, Windows, and macOS) Golang library for getting and setting the desktop background. Forked from github.com/reujab/wallpaper
 
 ## Installation
 
 ```sh
-go get github.com/reujab/wallpaper
+go get github.com/peterjmorgan/wallpaper
 ```
 
 ## Example
