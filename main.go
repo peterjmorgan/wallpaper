@@ -30,7 +30,14 @@ var DesktopSession = os.Getenv("DESKTOP_SESSION")
 var ErrUnsupportedDE = errors.New("your desktop environment is not supported")
 
 func downloadImage(url string) (string, error) {
-	res, err := http.Get(url)
+	client := &http.Client{}
+
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		return "", err
+	}
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Linux; Android 13; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36")
+	res, err := client.Do(req)
 	if err != nil {
 		return "", err
 	}
